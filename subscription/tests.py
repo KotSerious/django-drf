@@ -42,7 +42,7 @@ class SubscriptionTestCase(APITestCase):
             "well": self.well.pk
         }
 
-        response =self.client.post(
+        response = self.client.post(
             reverse('subscription:subscription_create'),
             data=data
         )
