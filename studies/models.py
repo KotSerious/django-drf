@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import User
+from config import settings
 
 
 NULLABLE = {'blank': True, 'null': True}
@@ -12,7 +13,7 @@ class Well(models.Model):
     title = models.CharField(max_length=100, verbose_name='Название')
     preview = models.ImageField(upload_to='studies', verbose_name='Превью', **NULLABLE)
     description = models.TextField(verbose_name='Описание')
-    author = models.ForeignKey(User, on_delete=models.CASCADE, **NULLABLE, verbose_name='Создатель курса')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE, verbose_name='Создатель урока')
 
     def __str__(self):
         """
