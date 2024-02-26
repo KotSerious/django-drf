@@ -1,3 +1,4 @@
+
 from django.urls import path
 from studies.apps import StudiesConfig
 from rest_framework.routers import DefaultRouter
@@ -8,6 +9,7 @@ app_name = StudiesConfig.name
 
 router = DefaultRouter()
 router.register(r'well', WellViewSet, basename='well')
+
 
 urlpatterns = [
     path('lessons/', LessonListAPIView.as_view(), name='lesson_list'),

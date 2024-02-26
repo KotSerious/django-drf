@@ -1,3 +1,4 @@
+
 from rest_framework import serializers
 from studies.models import Well, Lesson
 from studies.validators import VideoValidator
@@ -39,4 +40,3 @@ class WellSerializer(serializers.ModelSerializer):
     class Meta:
         model = Well
         fields = ('id', 'title', 'preview', 'description', 'count_lessons', 'lessons', 'author', 'is_subscription')
-        

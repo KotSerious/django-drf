@@ -1,3 +1,4 @@
+
 from studies.models import Lesson
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView
 from studies.serializers import LessonSerializer
@@ -11,6 +12,7 @@ class LessonCreateAPIView(CreateAPIView):
     Контроллер для создания сущности модели Урока
     """
     serializer_class = LessonSerializer
+
 
 
 class LessonListAPIView(ListAPIView):
@@ -28,7 +30,7 @@ class LessonRetrieveAPIView(RetrieveAPIView):
     """
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
-    #permission_classes = [IsAdminUser, IsModerator, IsAuthor]
+    # permission_classes = [IsAdminUser, IsModerator, IsAuthor]
 
 
 class LessonUpdateAPIView(UpdateAPIView):
@@ -37,7 +39,7 @@ class LessonUpdateAPIView(UpdateAPIView):
     """
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
-    #permission_classes = [IsModerator, IsAuthor]
+    # permission_classes = [IsModerator, IsAuthor]
 
 
 class LessonDestroyAPIView(DestroyAPIView):
@@ -46,4 +48,4 @@ class LessonDestroyAPIView(DestroyAPIView):
     """
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
-    #permission_classes = [IsAdminUser, IsAuthor]
+    # permission_classes = [IsAdminUser, IsAuthor]
