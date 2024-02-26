@@ -1,4 +1,3 @@
-
 from rest_framework import serializers
 from studies.models import Well, Lesson
 from studies.validators import VideoValidator

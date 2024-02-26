@@ -1,4 +1,3 @@
-
 from django.urls import path
 from studies.apps import StudiesConfig
 from rest_framework.routers import DefaultRouter

@@ -1,4 +1,3 @@
-
 from studies.models import Lesson
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView
 from studies.serializers import LessonSerializer
