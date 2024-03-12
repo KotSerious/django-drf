@@ -2,7 +2,6 @@ from django.db import models
 from users.models import User
 from studies.models import NULLABLE, Well, Lesson
 
-
 PAYMENT_METHOD = [
     ('cash', 'Наличные'),
     ('transfer', 'Перевод на счет'),
