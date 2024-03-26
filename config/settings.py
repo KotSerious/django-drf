@@ -94,7 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DATABASE_NAME'),
-        'HOST': '127.0.0.1',
+        'HOST': 'db',
         'USER': os.getenv('DATABASE_USER'),
         'PASSWORD': os.getenv('DATABASE_PASSWORD')
     }
@@ -177,8 +177,8 @@ STRIPE_PUBLISH_KEY = os.getenv('STRIPE_PUBLISH_KEY')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 
 # Настройки для Celery
-CELERY_BROKER_URL = 'redis://localhost:6379'    # URL-адрес брокера сообщений
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'    # URL-адрес брокера результатов, также Redis
+CELERY_BROKER_URL = 'redis://redis:6379'    # URL-адрес брокера сообщений
+CELERY_RESULT_BACKEND = 'redis://redis:6379'    # URL-адрес брокера результатов, также Redis
 CELERY_TIMEZONE = "UTC"    # Часовой пояс для работы Celery
 CELERY_TASK_TRACK_STARTED = True    # Флаг отслеживания выполнения задач
 CELERY_TASK_TIME_LIMIT = 30 * 60    # Максимальное время на выполнение задачи
